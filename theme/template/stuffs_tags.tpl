@@ -1,8 +1,10 @@
 {if $display_mode == 'cloud'}
 <div id="fullTagCloud">
+{if isset($tags)}
 	{foreach from=$tags item=tag}
 	<span><a href="{$tag.URL}" class="tagLevel{$tag.level}" title="{$tag.counter}">{$tag.name}</a></span>
 	{/foreach}
+{/if}
 </div>
 
 {elseif $display_mode == 'letters'}
