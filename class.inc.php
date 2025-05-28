@@ -143,7 +143,7 @@ ORDER BY pos ASC
             !$last['given_width'] or $i--;
             !$penul['given_width'] or $i--;
 
-            !$i or $default_width = intval((100 - $block['given_width'] - $last['given_width'] - $penul['given_width']) / $i);
+            !$i or $default_width = intval((100 - (int)$block['given_width'] - (int)$last['given_width'] - (int)$penul['given_width']) / $i);
 
             $penul['WIDTH'] = $penul['given_width'] ? $penul['given_width'] : $default_width;
             $block['WIDTH'] = $block['given_width'] ? $block['given_width'] : $default_width;
